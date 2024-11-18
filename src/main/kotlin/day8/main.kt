@@ -23,6 +23,53 @@ fun main() {
     val inputList = input.toList()
 
     part1(inputList)
+    part2(inputList)
+}
+
+fun part2(inputList: List<String>) {
+    val path = inputList.first()
+    val nodes = inputList.drop(2).map { Node.fromInput(it) }
+
+    val startNodes = nodes.filter { it.name.endsWith('A') }
+
+    val res = startNodes
+        .map { startNode ->
+            var currentNode = startNode
+            var counter = 0L
+
+            while (!currentNode.name.endsWith('Z')) {
+                val dir = path[(counter % path.length.toLong()).toInt()]
+                val nextNode =
+                    nodes.find { it.name == currentNode.getNext(dir) }
+                        ?: throw IllegalArgumentException("Node not found")
+                currentNode = nextNode
+                counter++
+            }
+
+            counter
+        }.ppcm()
+
+    print("Part 2: $res")
+}
+
+private fun pgcd(a: Long, b: Long): Long {
+    var larger = maxOf(a, b)
+    var smaller = minOf(a, b)
+    while (larger != smaller) {
+        val diff = larger - smaller
+        larger = maxOf(diff, smaller)
+        smaller = minOf(diff, smaller)
+    }
+
+    return larger
+}
+
+private fun ppcm(a: Long, b: Long): Long {
+    return a * b / pgcd(a, b)
+}
+
+private fun List<Long>.ppcm(): Long {
+    return this.reduce { acc, i -> ppcm(acc, i) }
 }
 
 private fun part1(inputList: List<String>) {
@@ -40,7 +87,7 @@ private fun part1(inputList: List<String>) {
         counter++
     }
 
-    println(counter)
+    println("Part 1: $counter")
 }
 
 private data class Node(val name: String, val left: String, val right: String) {

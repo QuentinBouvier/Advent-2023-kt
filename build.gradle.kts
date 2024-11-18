@@ -6,14 +6,15 @@ plugins {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
+val kotlinxCoroutineVersion = "1.9.0"
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     testImplementation(kotlin("test"))
-    implementation("org.eclipse.collections:eclipse-collections-api:11.1.0")
-    implementation("org.eclipse.collections:eclipse-collections:11.1.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutineVersion")
 }
 
 tasks.test {
