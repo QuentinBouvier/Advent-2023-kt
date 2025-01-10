@@ -1,4 +1,4 @@
-package day5
+package y2023.day5
 
 import commons.inputsFileToLineSequence
 
@@ -36,7 +36,7 @@ temperature-to-humidity map:
 humidity-to-location map:
 60 56 37
 56 93 4""".split('\n').asSequence()*/
-    val ls = inputsFileToLineSequence(5)
+    val ls = inputsFileToLineSequence(2023, 5)
 
     // prep
     val lsIter = ls.iterator()

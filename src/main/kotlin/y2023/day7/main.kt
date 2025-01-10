@@ -1,6 +1,4 @@
-package day7
-
-import java.io.File
+package y2023.day7
 
 fun main() {
     val example2 = """32T3K 765
@@ -35,7 +33,7 @@ JJJJ2 41"""
 //    val input = example.split("\n").asSequence()
 //    val input = example2.split("\n").asSequence()
 //    val input = trap.split("\n").asSequence()
-    val input = commons.inputsFileToLineSequence(7)
+    val input = commons.inputsFileToLineSequence(2023, 7)
 
 
     val lines = input

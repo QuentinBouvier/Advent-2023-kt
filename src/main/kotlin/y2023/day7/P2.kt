@@ -1,4 +1,4 @@
-package day7
+package y2023.day7
 
 class P2(lines: List<Pair<String, Int>>) : AbstractP(lines) {
     override fun mostPresentChars2(str: String): Map<Char, Int> {

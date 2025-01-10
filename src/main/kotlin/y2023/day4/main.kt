@@ -1,10 +1,10 @@
-package day4
+package y2023.day4
 
 import commons.inputsFileToLineSequence
 import kotlin.math.pow
 
 fun main() {
-    val ls = inputsFileToLineSequence(4)
+    val ls = inputsFileToLineSequence(2023,4)
 
 //    val ls = """Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
 //Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19

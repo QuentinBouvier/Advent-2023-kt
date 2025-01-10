@@ -1,9 +1,9 @@
-package day8
+package y2023.day8
 
 import commons.inputsFileToLineSequence
 
 fun main() {
-    val input = inputsFileToLineSequence(8).toList()
+    val input = inputsFileToLineSequence(2023, 8).toList()
 
 //    val input = """LLR
 //

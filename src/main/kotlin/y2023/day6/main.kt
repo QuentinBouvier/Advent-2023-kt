@@ -1,4 +1,4 @@
-package day6
+package y2023.day6
 
 fun main() {
     val input = """Time:        35     69     68     87

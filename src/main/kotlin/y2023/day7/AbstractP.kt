@@ -1,4 +1,4 @@
-package day7
+package y2023.day7
 
 import kotlin.math.pow
 
