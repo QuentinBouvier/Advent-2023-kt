@@ -43,3 +43,5 @@ bin/
 
 # Project
 input.txt
+
+gradle/wrapper
