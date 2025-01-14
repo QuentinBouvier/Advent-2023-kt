@@ -45,3 +45,4 @@ bin/
 input.txt
 
 gradle/wrapper
+.kotlin
